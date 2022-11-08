@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-danger shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -73,6 +73,31 @@
                     </ul>
                 </div>
             </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm navbar-hover">
+
+                <a class="navbar-brand" href="#">
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHover" aria-controls="navbarDD" aria-expanded="false" aria-label="Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarHover">
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown_remove_dropdown_class_for_clickable_link"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                                Category(Electronics)
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
         </nav>
 
         <main class="py-4">
