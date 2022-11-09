@@ -114,5 +114,42 @@
             @yield('content')
         </main>
     </div>
+
+    <style>
+        .dropdown:hover>.dropdown-menu{
+            display: block;
+        }
+        @media only screen and(max-width:9991px){
+            .navbar-hover .show> .dropdown-toggle::after{
+                transform: rotate(-90deg);
+            }
+        }
+
+        @media only screen and (min-width:492px){
+            .navbar-hover .collapse ul li{
+                position: relative;
+            }
+
+            .navbar-hover .collapse ul li:hover > ul{
+                display: block;
+            }
+
+            .navbar-hover .collapse ul ul{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                min-width: 250px;
+                display: none;
+            }
+
+            .navbar-hover .collapse ul ul ul{
+                position: absolute;
+                top: 0;
+                left: 100%;
+                min-width: 250px;
+                display: none;
+            }
+        }
+    </style>
 </body>
 </html>
