@@ -93,6 +93,16 @@
                             aria-expanded="false">
                                 Category(Electronics)
                             </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="" class="dropdown-item dropdown-toggle">Subcategory(Labtop)</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="" class="dropdown-item dropdown-toggle">ChildCategory(Dell)</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
 
                         </li>
                     </ul>
