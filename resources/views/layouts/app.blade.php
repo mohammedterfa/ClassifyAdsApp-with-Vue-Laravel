@@ -86,12 +86,13 @@
 
                 <div class="collapse navbar-collapse" id="navbarHover">
 
-                    <ul class="navbar-nav">
+                    <ul class="container-fluid navbar-nav">
+                        @for($i=0;$i<12;$i++)
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown_remove_dropdown_class_for_clickable_link"
+                            <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown_remove_dropdown_class_for_clickable_link"
                             aria-haspopup="true"
-                            aria-expanded="false">
-                                Category(Electronics)
+                            aria-expanded="false" id="menu">
+                                Category
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -105,6 +106,7 @@
                             </ul>
 
                         </li>
+                        @endfor
                     </ul>
                 </div>
 
