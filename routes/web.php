@@ -28,3 +28,9 @@ Route::get('/auth', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//admin
+Route::get('/auth/category', function () {
+    return view('backend.category.create');
+});
