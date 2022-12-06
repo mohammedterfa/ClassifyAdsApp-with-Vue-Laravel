@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="slider" style="margin-top: -25px;">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="2500">
         <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="slider/slider1.png" class="d-block w-100" alt="...">
