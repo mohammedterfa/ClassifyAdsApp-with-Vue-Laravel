@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //admin
-Route::get('/auth/category', function () {
-    return view('backend.category.create');
+Route::prefix('auth')->group(function () {
+   Route::resource('/category',CategoryController::class);
 });
