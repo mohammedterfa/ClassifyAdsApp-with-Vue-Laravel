@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use App\Http\Requests\CategoryFormRequest;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -67,7 +68,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        return view('backend.category.edit');
+        $category = Category::find($id);
+        return view('backend.category.edit', compact('category'));
     }
 
     /**
@@ -79,7 +81,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        if($request->hasFile('image')){
+            Storage::delete($category->image);
+            $image = $request->file('image')->store('public/category');
+            $category->update(['name'=>$request->name, 'image'=>$image]);
+        }
+
+        $category->update(['name'=>$request->name]);
+        return redirect()->route('category.index');
     }
 
     /**
