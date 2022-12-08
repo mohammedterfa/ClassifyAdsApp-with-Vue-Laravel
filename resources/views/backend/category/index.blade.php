@@ -22,13 +22,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Jacob</td>
-                                            <td>53275531</td>
-                                            <td> <button class="btn btn-info"><i class="mdi mdi-table-edit"></i></button></td>
-                                            <td><button class="btn btn-danger"><i class="mdi mdi-delete"></i></button></td>
-                                        </tr>
+                                        @forelse ($categories as $category)
 
+                                            <tr>
+                                                <td><img src="{{ Storage::url($category->image) }}" alt=""></td>
+                                                <td>{{ $category->name }}</td>
+                                                <td> <button class="btn btn-info"><i class="mdi mdi-table-edit"></i></button></td>
+                                                <td><button class="btn btn-danger"><i class="mdi mdi-delete"></i></button></td>
+                                            </tr>
+                                        @empty
+                                            <td>No category to display</td>
+                                        @endforelse
 
 
                                     </tbody>
