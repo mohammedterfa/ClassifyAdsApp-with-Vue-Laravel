@@ -46,7 +46,7 @@ class CategoryController extends Controller
             'slug'=>Str::slug($request->name)
         ]);
 
-        return redirect()->back();
+        return redirect()->route('category.index')->with('message','Category created successfully');
     }
 
     /**
@@ -85,7 +85,7 @@ class CategoryController extends Controller
         if($request->hasFile('image')){
             Storage::delete($category->image);
             $image = $request->file('image')->store('public/category');
-            $category->update(['name'=>$request->name, 'image'=>$image]);
+            $category->update(['name'=>$request->name, 'image'=>$image])->with('message','Category updated successfully');
         }
 
         $category->update(['name'=>$request->name]);
@@ -105,6 +105,6 @@ class CategoryController extends Controller
             $category->delete();
         }
 
-        return back();
+        return back()->with('message','Category deleted successfully');
     }
 }

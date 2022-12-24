@@ -2,6 +2,7 @@
 @section('content')
     <div class="main-panel">
         <div class="content-wrapper">
+            @include('backend.inc.message')
             <h4>Manage Category</h4>
             <div class="row justify-content-center">
 
