@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubcategoryController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +36,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //admin
 Route::prefix('auth')->group(function () {
    Route::resource('/category',CategoryController::class);
+   Route::resource('/subcategory',SubCategoryController::class);
 });
