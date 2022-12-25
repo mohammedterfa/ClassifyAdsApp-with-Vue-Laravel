@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\SubcategoryFormRequest;
 
 class SubcategoryController extends Controller
 {
@@ -32,7 +33,7 @@ class SubcategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SubcategoryFormRequest $request)
     {
         //
     }

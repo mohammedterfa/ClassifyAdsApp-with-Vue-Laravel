@@ -13,7 +13,7 @@ class SubcategoryFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class SubcategoryFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'=>'required|min:2|max:40|unique:subcategories',
+            'category_id'=>'required'
         ];
     }
 }

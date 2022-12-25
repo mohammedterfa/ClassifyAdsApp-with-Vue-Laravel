@@ -29,13 +29,13 @@
 
                                 <div class="form-group">
                                     <label for="name">Choose Category</label>
-                                    <select name="category_id" class="form-control">
+                                    <select name="category_id" class="form-control @error('category_id') is-invalid @enderror">
                                         <option value="">Select Category</option>
                                         @foreach (App\Models\Category::all() as $category)
-                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
                                         @endforeach
                                     </select>
-                                    @error('name')
+                                    @error('category_id')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>
                                                 {{ $message }}
