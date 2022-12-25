@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\SubcategoryFormRequest;
+use App\Models\Subcategory;
+use Illuminate\Support\Str;
 
 class SubcategoryController extends Controller
 {
@@ -35,7 +37,10 @@ class SubcategoryController extends Controller
      */
     public function store(SubcategoryFormRequest $request)
     {
-        //
+        Subcategory::create([
+            'name'=>$request->name,
+            'slug'=>Str::slug($request->name)
+        ]);
     }
 
     /**
