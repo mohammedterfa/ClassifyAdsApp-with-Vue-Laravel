@@ -7,7 +7,7 @@
             <h3>Add SubCategory</h3>
             <div class="row justify-content-center">
                 <div class="col-md-10">
-
+                    @include('backend.inc.message')
                     <div class="card">
                         <div class="card-body">
 
