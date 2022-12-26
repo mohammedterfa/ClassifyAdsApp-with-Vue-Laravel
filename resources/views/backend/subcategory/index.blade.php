@@ -38,7 +38,7 @@
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-danger" data-toggle="modal"
                                                         data-target="#exampleModal{{ $subcategory->id }}">
-                                                        Delete<i class="mdi mdi-delete"></i>
+                                                        <i class="mdi mdi-delete"></i>
                                                     </button>
 
                                                     <!-- Modal -->
