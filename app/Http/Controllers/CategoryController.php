@@ -85,11 +85,11 @@ class CategoryController extends Controller
         if($request->hasFile('image')){
             Storage::delete($category->image);
             $image = $request->file('image')->store('public/category');
-            $category->update(['name'=>$request->name, 'image'=>$image])->with('message','Category updated successfully');
+            $category->update(['name'=>$request->name, 'image'=>$image]);
         }
 
         $category->update(['name'=>$request->name]);
-        return redirect()->route('category.index');
+        return redirect()->route('category.index')->with('message','Category updated successfully');
     }
 
     /**
