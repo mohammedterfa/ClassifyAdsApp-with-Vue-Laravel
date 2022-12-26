@@ -16,7 +16,8 @@ class SubcategoryController extends Controller
      */
     public function index()
     {
-        //
+        $subcategories = Subcategory::get();
+        return view('backend.subcategory.index', compact('subcategories'));
     }
 
     /**

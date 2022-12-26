@@ -3,7 +3,7 @@
     <div class="main-panel">
         <div class="content-wrapper">
             @include('backend.inc.message')
-            <h4>Manage Category</h4>
+            <h4>Manage Subcategory</h4>
             <div class="row justify-content-center">
 
 
@@ -16,37 +16,37 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Image</th>
+                                            <th>Category</th>
                                             <th>Name</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse ($categories as $category)
+                                        @forelse ($subcategories as $subcategory)
                                             <tr>
-                                                <td><img src="{{ Storage::url($category->image) }}" alt=""></td>
-                                                <td>{{ $category->name }}</td>
+                                                <td>{{ $subcategory->category_id }}</td>
+                                                <td>{{ $subcategory->name }}</td>
 
                                                 <td>
-                                                    <a href="{{ route('category.edit', [$category->id]) }}">
-                                                        <button class="btn btn-info"><i
+                                                    <a href="{{ route('subcategory.edit', [$subcategory->id]) }}">
+                                                        <button class="btn btn-sm btn-info"><i
                                                                 class="mdi mdi-table-edit"></i></button>
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-danger" data-toggle="modal"
-                                                        data-target="#exampleModal{{ $category->id }}">
+                                                        data-target="#exampleModal{{ $subcategory->id }}">
                                                         Delete<i class="mdi mdi-delete"></i>
                                                     </button>
 
                                                     <!-- Modal -->
-                                                    <div class="modal fade" id="exampleModal{{ $category->id }}"
+                                                    <div class="modal fade" id="exampleModal{{ $subcategory->id }}"
                                                         tabindex="-1" aria-labelledby="exampleModalLabel"
                                                         aria-hidden="true">
                                                         <div class="modal-dialog">
-                                                            <form action="{{ route('category.destroy', $category->id) }}"
+                                                            <form action="{{ route('subcategory.destroy', $subcategory->id) }}"
                                                                 method="post">@csrf
                                                                 @method('DELETE')
                                                                 <div class="modal-content">
@@ -67,7 +67,7 @@
                                                                         <button type="button" class="btn btn-secondary"
                                                                             data-dismiss="modal">Close</button>
                                                                         <button type="submit"
-                                                                            class="btn btn-danger">Delete</button>
+                                                                            class="btn btn-sm btn-danger">Delete</button>
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -78,7 +78,7 @@
                                                 </td>
                                             </tr>
                                         @empty
-                                            <td>No category to display</td>
+                                            <td>No subcategory to display</td>
                                         @endforelse
 
 
