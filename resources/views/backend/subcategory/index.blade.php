@@ -25,7 +25,7 @@
                                     <tbody>
                                         @forelse ($subcategories as $subcategory)
                                             <tr>
-                                                <td>{{ $subcategory->category_id }}</td>
+                                                <td>{{ $subcategory->category->name }}</td>
                                                 <td>{{ $subcategory->name }}</td>
 
                                                 <td>
