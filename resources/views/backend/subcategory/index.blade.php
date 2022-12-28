@@ -6,7 +6,7 @@
             <h4>Manage Subcategory</h4>
             <div class="row justify-content-center">
 
-                this code added
+               <div class="origin"></div>
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
