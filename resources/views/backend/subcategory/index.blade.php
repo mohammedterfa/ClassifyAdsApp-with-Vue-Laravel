@@ -10,20 +10,6 @@
                     <div class="card">
                         <div class="card-body">
 
-<div class="table-responsive">
-    <table>
-        <thead>
-            <tr>name</tr>
-            <tr>category</tr>
-            <tr>name</tr>
-            <tr>name</tr>
-        </thead>
-    </table>
-</div>
-
-<div>
-    <img src="{{ $category->name }}" alt="">
-</div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
