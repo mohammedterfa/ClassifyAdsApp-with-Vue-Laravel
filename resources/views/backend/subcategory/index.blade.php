@@ -12,7 +12,12 @@
 
 <div class="table-responsive">
     <table>
-
+        <thead>
+            <tr>name</tr>
+            <tr>category</tr>
+            <tr>name</tr>
+            <tr>name</tr>
+        </thead>
     </table>
 </div>
                             <div class="table-responsive">
