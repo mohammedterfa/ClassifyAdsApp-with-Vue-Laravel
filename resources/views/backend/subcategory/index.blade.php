@@ -20,6 +20,10 @@
         </thead>
     </table>
 </div>
+
+<div>
+    <img src="{{ $category->name }}" alt="">
+</div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
