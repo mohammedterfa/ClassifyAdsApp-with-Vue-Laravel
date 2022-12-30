@@ -9,7 +9,6 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -58,14 +57,14 @@
                                                                     </div>
 
                                                                     <div class="modal-body">
-                                                                        Once deleted can never be recovered.
+                                                                        Are you sure you want to delete this item?
                                                                     </div>
 
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-secondary"
-                                                                            data-dismiss="modal">Close</button>
+                                                                            data-dismiss="modal">Cancel</button>
                                                                         <button type="submit"
-                                                                            class="btn btn-sm btn-danger">Delete</button>
+                                                                            class="btn btn-sm btn-danger">Yes, Delete</button>
                                                                     </div>
                                                                 </div>
                                                             </form>
