@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\SubcategoryFormRequest;
+use App\Http\Requests\SubcategoryUpdateRequest;
 use App\Models\Subcategory;
 use Illuminate\Support\Str;
 
@@ -77,9 +78,15 @@ class SubcategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SubcategoryUpdateRequest $request, $id)
     {
-        //
+        Subcategory::find($id)->update([
+            'name'=>$request->name,
+            'category_id'=>$request->category_id
+        ]);
+
+        return redirect()->route('subcategory.index')
+        ->with('message', 'Subcategory updated successfully');
     }
 
     /**
