@@ -66,7 +66,8 @@ class SubcategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $subcategory = Subcategory::find($id);
+        return view('backend.subcategory.edit', compact('subcategory'));
     }
 
     /**
