@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ChildController extends Controller
+class ChildcategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,7 +23,7 @@ class ChildController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.childcategory.create');
     }
 
     /**
