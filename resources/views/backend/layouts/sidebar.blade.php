@@ -22,14 +22,20 @@
           </div>
         </li>
 
-
-          <div class="collapse" id="ui-basic1">
-            <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons1</a></li>
-              <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography1</a></li>
-            </ul>
-          </div>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
+              <i class="mdi mdi-circle-outline menu-icon"></i>
+              <span class="menu-title">Subcategory</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic1">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{ route('subcategory.create') }}">Add</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('subcategory.index') }}">Manage</a></li>
+              </ul>
+            </div>
         </li>
+
 
 
         <li class="nav-item">
