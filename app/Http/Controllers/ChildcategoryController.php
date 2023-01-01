@@ -89,6 +89,8 @@ class ChildcategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Childcategory::find($id)->delete();
+
+        return back()->with('message', 'Childcategory deleted successfully');
     }
 }
