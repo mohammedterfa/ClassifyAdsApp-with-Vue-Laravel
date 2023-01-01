@@ -9,6 +9,6 @@ class MenuController extends Controller
 {
     public function menu(){
         $menus = Category::with('subcategories')->get();
-        return view('layouts.app', compact('menus'));
+        return view('index', compact('menus'));
     }
 }
