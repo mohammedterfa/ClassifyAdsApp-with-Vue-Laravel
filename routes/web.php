@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\ChildcategoryController;
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -40,3 +41,5 @@ Route::prefix('auth')->group(function () {
    Route::resource('/subcategory',SubCategoryController::class);
    Route::resource('/childcategory',ChildcategoryController::class);
 });
+
+Route::get('/', [MenuController::class, 'menu']);

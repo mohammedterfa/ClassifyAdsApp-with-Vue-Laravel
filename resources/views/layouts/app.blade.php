@@ -87,26 +87,35 @@
                 <div class="collapse navbar-collapse" id="navbarHover">
 
                     <ul class="container-fluid navbar-nav">
-                        @for($i=0;$i<12;$i++)
+                        @foreach ($menus as $menuItem)
+
+
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown_remove_dropdown_class_for_clickable_link"
                             aria-haspopup="true"
                             aria-expanded="false" id="menu">
-                                Category
+                                {{ $menuItem->name }}
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="" class="dropdown-item dropdown-toggle">Subcategory(Labtop)</a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="" class="dropdown-item dropdown-toggle">ChildCategory(Dell)</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                @foreach ($menuItem->subcategories as $subMenuItem )
+
+                                    <li>
+                                        <a href="" class="dropdown-item dropdown-toggle">{{ $subMenuItem->name }}</a>
+                                        <ul class="dropdown-menu">
+                                            @foreach ($subMenuItem->childcategories as $childMenu )
+
+                                                <li>
+                                                    <a href="" class="dropdown-item">{{ $childMenu->name }}</a>
+                                                </li>
+
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                @endforeach
                             </ul>
 
                         </li>
-                        @endfor
+                        @endforeach
                     </ul>
                 </div>
 
