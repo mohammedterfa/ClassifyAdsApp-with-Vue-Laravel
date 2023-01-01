@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ChildcategoryRequest;
+use App\Http\Requests\ChildcategoryUpdateRequest;
 use App\Models\Childcategory;
 use Illuminate\Support\Str;
 
@@ -66,7 +67,8 @@ class ChildcategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $childcategory = Childcategory::find($id);
+        return view('backend.childcategory.edit', compact('childcategory'));
     }
 
     /**
@@ -76,9 +78,15 @@ class ChildcategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ChildcategoryUpdateRequest $request, $id)
     {
-        //
+        Childcategory::find($id)->update([
+            'name'=>$request->name,
+            'subcategory_id'=>$request->subcategory_id
+        ]);
+
+        return redirect()->route('childcategory.index')
+        ->with('message', 'childcategory updated successfully');
     }
 
     /**
