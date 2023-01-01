@@ -5,6 +5,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\ChildcategoryController;
 use App\Http\Controllers\MenuController;
+use App\Models\Category;
+use App\Http\Controllers\AdvertisementController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -40,3 +42,14 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::get('/', [MenuController::class, 'menu']);
+
+
+//ads
+
+Route::get('ads/create','AdvertisementController@create');
+
+
+view()->composer('*', function ($view) {
+    $menus = Category::with('subcategories')->get();
+    $view->with('menus', $menus);
+});
