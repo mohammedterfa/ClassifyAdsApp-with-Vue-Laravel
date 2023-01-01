@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Subcategory;
 
 class Childcategory extends Model
 {
@@ -14,4 +15,8 @@ class Childcategory extends Model
         'subcategory_id',
         'slug'
     ];
+
+    public function subcategory(){
+        return $this->belongsTo(Subcategory::class, 'subcategory_id', 'id');
+    }
 }
