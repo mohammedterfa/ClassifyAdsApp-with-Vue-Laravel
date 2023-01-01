@@ -25,7 +25,7 @@
                                     <tbody>
                                         @forelse ($childcategories as $childcategory)
                                             <tr>
-                                                <td>{{ $childcategory->subcategory->name }}</td>
+                                                <td class="category_{{ $childcategory->subcategory->id }}">{{ $childcategory->subcategory->name }}</td>
                                                 <td>{{ $childcategory->name }}</td>
 
                                                 <td>
@@ -89,4 +89,61 @@
                     </div>
                 </div>
             </div>
+
+
+            <style>
+                td.category_3{
+                    background-color: aliceblue;
+                }
+
+                td.category_4{
+                    background-color: bisque;
+                }
+
+                td.category_5{
+                    background-color: darkgray;
+                }
+
+                td.category_6{
+                    background-color: rgb(131, 120, 201);
+                }
+
+                td.category_7{
+                    background-color: rgb(231, 147, 250);
+                }
+
+                td.category_8{
+                    background-color: rgb(251, 167, 223);
+                }
+
+                td.category_9{
+                    background-color: rgb(211, 232, 104);
+                }
+
+                td.category_10{
+                    background-color: rgb(232, 247, 133);
+                }
+
+                td.category_12{
+                    background-color: rgb(162, 247, 133);
+                }
+
+                td.category_13{
+                    background-color: rgb(173, 183, 255);
+                }
+
+                td.category_17{
+                    background-color: rgb(221, 173, 255);
+                }
+
+                td.category_19{
+                    background-color: rgb(255, 173, 245);
+                }
+
+                td.category_20{
+                    background-color: rgb(255, 173, 178);
+                }
+            </style>
+
+
         @endsection
