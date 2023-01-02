@@ -46,10 +46,7 @@ Route::get('/', [MenuController::class, 'menu']);
 
 //ads
 
-Route::get('ads/create','AdvertisementController@create');
+Route::get('ads/create',[AdvertisementController::class, 'create']);
 
 
-view()->composer('*', function ($view) {
-    $menus = Category::with('subcategories')->get();
-    $view->with('menus', $menus);
-});
+
