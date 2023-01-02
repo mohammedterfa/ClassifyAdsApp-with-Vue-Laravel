@@ -9,7 +9,7 @@
 
                     <div class="card-body ">
                         <img class="mx-auto d-block img-thumbnail" src="/img/man.jpg" width="130">
-                        <p class="text-center"><b>John Doe</b></p>
+                        <p class="text-center"><b>Mohammed Terfa</b></p>
                     </div>
                     <hr style="border:2px solid blue;">
                     <div class="vertical-menu">
@@ -66,26 +66,26 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="name">Name</label>
+                                <label for="name"><b>Name</b></label>
                                 <input type="text" name="name" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="description">Description</label>
+                                <label for="description"><b>Description</b></label>
                                 <textarea name="description" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="description">Price</label>
+                                <label for="description"><b>Price</b></label>
                                 <input type="text" name="price" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="description">Price staus</label>
+                                <label for="description"><b>Price staus</b></label>
                                 <select class="form-control" name="price_status">
                                     <option value="negoitable">Negotiable</option>
                                     <option value="fixed">Fixed</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="description">Product Condition</label>
+                                <label for="description"><b>Product Condition</b></label>
                                 <select class="form-control" name="product_condition">
                                     <option value="">Select </option>
                                     <option value="likenew">Looks like New</option>
@@ -94,7 +94,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="location">Listing Location</label>
+                                <label for="location"><b>Listing Location</b></label>
                                 <input type="text" class="form-control" name="listing_location">
                             </div>
                             <label for="file" class="mt-2"><b>Choose address</b></label>
@@ -118,11 +118,11 @@
 
                             </div>
                             <div class="form-group">
-                                <label for="location">Seller contact number</label>
+                                <label for="location"><b>Seller contact number</b></label>
                                 <input type="number" class="form-control" name="phone_number">
                             </div>
                             <div class="form-group">
-                                <label for="location">Demo link of product(ie:youtube)</label>
+                                <label for="location"><b>Demo link of product(ie:youtube)</b></label>
                                 <input type="text" class="form-control" name="link">
                             </div>
                             <div class="form-group">
