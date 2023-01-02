@@ -25,8 +25,56 @@
             </div>
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Home</div>
+                    <div class="card-header text-white" style="background-color:rgb(0, 4, 106);">Post your ads</div>
                     <div class="card-body">
+                        <label for="file" class="mt-2"><b>Upload 3 images</b></label>
+                        <div class="form-inline form-group mt-1">
+                            <div class="col-md-4">
+                                <input type="file" class="" name="">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="file" class="" name="">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="file" class="" name="">
+                            </div>
+                        </div>
+
+                        <label for="file" class="mt-2"><b>Choose category</b></label>
+                        <div class="form-inline form-group mt-1">
+                            <div class="col-md-4">
+                                <select name="" class="form-control">
+                                    <option value="">Choose category</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select name="" class="form-control">
+                                    <option value="">Choose subcategory</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select name="" class="form-control">
+                                    <option value="">Choose childcategory</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name"><b>Name</b></label>
+                            <input type="text" name="name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descrition"><b>Description</b></label>
+                            <textarea name="" class="form-control" id="" cols="5" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descrition"><b>Price</b></label>
+                            <input type="text" class="form-control">
+                        </div>
+
+
                     </div>
                 </div>
             </div>
