@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Advertisement;
 use Illuminate\Support\Str;
+use App\Http\Requests\AdsFormRequest;
 
 class AdvertisementController extends Controller
 {
@@ -36,7 +37,7 @@ class AdvertisementController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AdsFormRequest $request)
     {
         $data = $request->all();
 
