@@ -16,7 +16,7 @@
         </div>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container">
     <span>
         <h1>Car</h1>
         <a href="#" class="float-end">View all</a>
