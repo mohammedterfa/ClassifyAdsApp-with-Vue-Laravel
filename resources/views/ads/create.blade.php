@@ -41,7 +41,7 @@
                         </div>
                         <div class="card-body">
                             <label for="file" class="mt-2"><b>Upload 3 Images</b></label>
-                            <div class="form-inline form-group mt-1">
+                            <div class="row m-2">
 
                                 <div class="col-md-4">
                                     <input type="file" class="" name="feature_image" accept="image/*">
@@ -55,7 +55,7 @@
 
                             </div>
                             <label for="file" class="mt-2"><b>Choose category</b></label>
-                            <div class="form-inline form-group mt-1">
+                            <div class="row m-2">
 
                                 <div class="col-md-4">
                                     <select class="form-control" name="category_id">
@@ -117,7 +117,7 @@
                                 <input type="text" class="form-control" name="listing_location">
                             </div>
                             <label for="file" class="mt-2"><b>Choose address</b></label>
-                            <div class="form-inline form-group mt-1">
+                            <div class="row m-2">
 
                                 <div class="col-md-4">
                                     <select class="form-control" name="country_id">
@@ -153,8 +153,8 @@
                                 <label for="location"><b>Demo link of product(ie:youtube)</b></label>
                                 <input type="text" class="form-control" name="link">
                             </div>
-                            <div class="form-group">
-                                <button class="btn btn-danger float-right" type="submit">Publish</button>
+                            <div class="form-group mt-2">
+                                <button class="btn btn-danger float-end" type="submit">Publish</button>
                             </div>
 
                         </div>
