@@ -1,8 +1,13 @@
 @extends('layouts.app')
 @section('content')
+<div>
 
+    <example-component/>
+
+</div>
 
     <div class="container">
+
         <div class="row ">
             <div class="col-md-3">
                 <div class="card ">
@@ -81,6 +86,7 @@
                                         @endforeach
                                     </select>
                                 </div>
+
 
                             </div>
 
